@@ -98,7 +98,7 @@ class FancyBottomNavigationState extends State<FancyBottomNavigation>
     _setSelected(widget.tabs[widget.initialSelection].key);
   }
 
-  _setSelected(UniqueKey key) {
+  _setSelected(GlobalKey key) {
     int selected = widget.tabs.indexWhere((tabData) => tabData.key == key);
 
     if (mounted) {
@@ -252,7 +252,7 @@ class TabData {
   final IconData iconData;
   final String title;
   final Function onclick;
-  final UniqueKey key;
+  final GlobalKey key;
   final int actions;
 
   TabData({
