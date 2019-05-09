@@ -248,10 +248,12 @@ class FancyBottomNavigationState extends State<FancyBottomNavigation>
 }
 
 class TabData {
-  TabData({@required this.iconData, @required this.title, this.onclick});
+  TabData({@required this.iconData, @required this.title, this.onclick, UniqueKey iconKey, int actions = 0});
 
   IconData iconData;
   String title;
   Function onclick;
-  final UniqueKey key = UniqueKey();
+  final UniqueKey key = iconKey;
+  int actions = actions;
+
 }
